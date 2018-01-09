@@ -11,3 +11,36 @@ buildscript {
 }
 
 apply plugin: 'com.moowork.node'
+apply plugin: 'java'
+
+task myBuild(type: NodeTask) {
+    script = file('node_modules/react-scripts/bin/react-scripts.js')
+    args = ['build']
+}
+
+task myCopy(type: Copy) {
+    from 'build'
+    into "src/main/resources/META-INF/resources/uiapp"
+    exclude('service-worker.js')
+
+}
+
+task myClean(type: Delete) {
+    def delete = delete('src/main/resources/META-INF/resources/uiapp/')
+    delete
+}
+
+myBuild.dependsOn npmInstall
+myCopy.dependsOn myBuild
+compileJava.dependsOn myCopy
+
+clean.dependsOn myClean
+
+repositories {
+    mavenCentral();
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.13'
+    testCompile 'junit:junit:3.8.2'
+}

@@ -1,4 +1,2 @@
 include 'ui'
 include 'app'
-
-rootProject.name = 'root'
