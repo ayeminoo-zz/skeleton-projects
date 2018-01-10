@@ -1,0 +1,195 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<!--TESTING: SEE CONSOLE!-->
+<!--<script src="js/app.js" > </script>-->
+
+<style>
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .left-menu {
+        /*margin-left: -160px;*/
+        width: 160px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        border: dotted;
+        background: #191818;
+        overflow-y: auto;
+    }
+
+    .sub-menu {
+        color: #999;
+        /*border: none;*/
+        /*white-space: normal;*/
+        /*padding: 0.625em 1em;*/
+    }
+
+    .container {
+        position: relative;
+        left: 160px;
+        border: dotted;
+        top: 0;
+        bottom: 0;
+    }
+
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+    }
+
+    .sub-menu ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        /* height: 100%; */
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        position: relative;
+        /* border-width: thick; */
+        border-bottom: 1px solid #333;
+        padding: 0.625em 1em;
+    }
+
+    .sub-menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    .sub-menu ul li:hover {
+        background: grey;
+    }
+
+    ul {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        width: 100%;
+        color: #333;
+        font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    td, th {
+        border: 1px solid transparent;
+        height: 30px;
+        transition: all 0.3s;
+    }
+
+    th {
+        background: #999999; /* Light grey background */
+        font-weight: bold; /* Make sure they're bold */
+    }
+
+    td {
+        background: #FAFAFA; /* Lighter grey background */
+        text-align: center; /* Center our text */
+    }
+
+    tr:nth-child(even) td {
+        background: #F1F1F1;
+    }
+
+    tr:nth-child(odd) td {
+        background: #FEFEFE;
+    }
+
+    .table-footer div{
+        display: inline-flex;
+        float:left;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 20px;
+    }
+    tr:last-child td{
+        background: #999999;
+    }
+
+
+</style>
+
+<div class="left-menu">
+    <div class="sub-menu">
+        <ul>
+            <li>Question 1</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>Ramesh Raman</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Shabbir Hussein</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>Ramesh Raman</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Shabbir Hussein</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>Ramesh Raman</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Shabbir Hussein</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>Ramesh Raman</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Shabbir Hussein</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>Ramesh Raman</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Shabbir Hussein</td>
+                <td>7000</td>
+            </tr>
+            <tr class="table-footer">
+                <td colspan="2">
+                    <div>
+                        <div><i class="material-icons">note_add</i></div>
+
+                        <div> Showing Page 1 of 394</div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
